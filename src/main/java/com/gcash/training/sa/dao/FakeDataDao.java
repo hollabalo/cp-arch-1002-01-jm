@@ -32,7 +32,7 @@ public class FakeDataDao implements UserDao {
 
     @Override
     public int updateUser(User user) {
-        if(database.get(user.getUserId()) == null) {
+        if (database.get(user.getUserId()) == null) {
             // do nothing
             return -1;
         }
@@ -42,7 +42,7 @@ public class FakeDataDao implements UserDao {
 
     @Override
     public int deleteUserByUserId(String id) {
-        if(database.get(UUID.fromString(id)) == null) {
+        if (database.get(UUID.fromString(id)) == null) {
             // do nothing
             return -1;
         }

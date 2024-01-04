@@ -11,8 +11,12 @@ import java.util.List;
 public interface UserDao {
 
     List<User> selectAllUsers();
+
     User selectUserByUserId(String id);
+
     int updateUser(User user);
+
     int deleteUserByUserId(String id);
+
     int insertUser(User user);
 }

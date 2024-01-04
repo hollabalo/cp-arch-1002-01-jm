@@ -23,27 +23,27 @@ public class HelloController {
         this.userService = userService;
     }
 
-    @GetMapping(value = { "", "/" })
+    @GetMapping(value = {"", "/"})
     List<User> getUsers() {
         return userService.getAllUsers();
     }
 
-    @GetMapping(value = {  "/{id}", "/{id}/" })
+    @GetMapping(value = {"/{id}", "/{id}/"})
     User getUser(@PathVariable String id) {
         return userService.getUser(id);
     }
 
-    @PostMapping(value = {   "", "/"})
+    @PostMapping(value = {"", "/"})
     Integer addUser(@RequestBody User user) {
         return userService.insertUser(user);
     }
 
-    @PutMapping(value = {  "/{id}", "/{id}/" })
+    @PutMapping(value = {"/{id}", "/{id}/"})
     Integer editUser(@PathVariable String id, @RequestBody User user) {
         return userService.updateUser(id, user);
     }
 
-    @DeleteMapping(value = {  "/{id}", "/{id}/" })
+    @DeleteMapping(value = {"/{id}", "/{id}/"})
     Integer deleteUser(@PathVariable String id) {
         return userService.removeUser(id);
     }

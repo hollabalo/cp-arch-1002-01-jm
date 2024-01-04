@@ -31,6 +31,10 @@ public class UserService {
     }
 
     public int updateUser(String id, User user) {
+        if (userDao.selectUserByUserId(id) == null) {
+            return -1;
+        }
+
         User data = User.builder()
                 .userId(UUID.fromString(id))
                 .firstName(user.getFirstName())
@@ -43,6 +47,9 @@ public class UserService {
     }
 
     public int removeUser(String id) {
+        if (userDao.selectUserByUserId(id) == null) {
+            return -1;
+        }
         return userDao.deleteUserByUserId(id);
     }
 

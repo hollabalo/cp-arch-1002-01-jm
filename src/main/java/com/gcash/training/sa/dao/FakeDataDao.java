@@ -15,7 +15,7 @@ public class FakeDataDao implements UserDao {
 
     static {
         database = new HashMap<>();
-        UUID id = UUID.randomUUID();
+        UUID id = UUID.fromString("142b9c88-9993-4283-b506-4a395cbda8d0");
         database.put(id, new User(id, "juan", "dela cruz", 22,
                 "juandelacruz@gmail.com", User.Gender.Male));
     }

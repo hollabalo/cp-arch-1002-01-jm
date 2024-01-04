@@ -1,1 +1,1 @@
-# S03 Activity 1: Simple Controller
+# S03 Activity 1: Simple Controller with BDD
